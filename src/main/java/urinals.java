@@ -8,7 +8,7 @@ public class urinals {
 
 
 
-    public boolean isGoodString(String string)
+    public boolean goodString(String string)
     {
         for(int i = 0; i < string.length() - 1; i++){
             if(string.charAt(i) == '1' && string.charAt(i + 1) == '1')
@@ -18,5 +18,10 @@ public class urinals {
 
         }
         return true;
+    }
+
+    public boolean emptyString(String string)
+    {
+        return string.length() == 0;
     }
 }

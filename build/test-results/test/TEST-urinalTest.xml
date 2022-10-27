@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="urinalTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-27T20:13:35" hostname="KUNAL" time="0.025">
+<testsuite name="UrinalTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-10-27T20:51:13" hostname="KUNAL" time="0.033">
   <properties/>
-  <testcase name="checkGoodStringTest()" classname="urinalTest" time="0.025"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="checkGoodStringTest()" classname="UrinalTest" time="0.029"/>
+  <testcase name="checkIsEmpty()" classname="UrinalTest" time="0.003"/>
+  <system-out><![CDATA[====== KUNAL JITENDRA PATEL == TEST ONE EXECUTED =======
+====== KUNAL JITENDRA PATEL == TEST TWO EXECUTED =======
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
