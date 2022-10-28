@@ -127,7 +127,7 @@ public class urinals {
     }
 
     public boolean createNewFile() throws IOException {
-        File f1 = new File("src/resources/rule.txt");
+        File f1 = new File("src/resources/rule/rule.txt");
         boolean value = f1.createNewFile();
         return value;
     }

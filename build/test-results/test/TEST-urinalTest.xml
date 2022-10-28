@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="UrinalTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-10-28T06:21:29" hostname="KUNAL" time="0.071">
+<testsuite name="UrinalTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-10-28T06:37:41" hostname="KUNAL" time="0.07">
   <properties/>
-  <testcase name="checkFileNotEmptyTest()" classname="UrinalTest" time="0.033"/>
-  <testcase name="checkNewFileCreatedTest()" classname="UrinalTest" time="0.005"/>
-  <testcase name="checkFileEmptyTest()" classname="UrinalTest" time="0.001"/>
-  <testcase name="checkGoodStringTest()" classname="UrinalTest" time="0.002"/>
+  <testcase name="checkFileNotEmptyTest()" classname="UrinalTest" time="0.029"/>
+  <testcase name="checkNewFileCreatedTest()" classname="UrinalTest" time="0.004"/>
+  <testcase name="checkFileEmptyTest()" classname="UrinalTest" time="0.002"/>
+  <testcase name="checkGoodStringTest()" classname="UrinalTest" time="0.001"/>
   <testcase name="checkCountOfAvailableUrinalsTest()" classname="UrinalTest" time="0.001"/>
-  <testcase name="checkFileNotFountTest()" classname="UrinalTest" time="0.005"/>
-  <testcase name="checkFileFoundTest()" classname="UrinalTest" time="0.016"/>
-  <testcase name="checkIsEmpty()" classname="UrinalTest" time="0.001"/>
+  <testcase name="checkFileNotFountTest()" classname="UrinalTest" time="0.006"/>
+  <testcase name="checkFileFoundTest()" classname="UrinalTest" time="0.018"/>
+  <testcase name="checkIsEmpty()" classname="UrinalTest" time="0.002"/>
   <system-out><![CDATA[====== KUNAL JITENDRA PATEL == TEST SEVEN EXECUTED =======
 ====== KUNAL JITENDRA PATEL == TEST EIGHT EXECUTED =======
 ====== KUNAL JITENDRA PATEL == TEST SIX EXECUTED =======
