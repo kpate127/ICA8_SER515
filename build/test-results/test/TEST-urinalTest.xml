@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="UrinalTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-10-28T05:38:04" hostname="KUNAL" time="0.059">
+<testsuite name="UrinalTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-10-28T06:05:42" hostname="KUNAL" time="0.062">
   <properties/>
   <testcase name="checkFileNotEmptyTest()" classname="UrinalTest" time="0.034"/>
   <testcase name="checkNewFileCreatedTest()" classname="UrinalTest" time="0.003"/>
-  <testcase name="checkFileEmptyTest()" classname="UrinalTest" time="0.001"/>
-  <testcase name="checkGoodStringTest()" classname="UrinalTest" time="0.002"/>
+  <testcase name="checkFileEmptyTest()" classname="UrinalTest" time="0.005"/>
+  <testcase name="checkGoodStringTest()" classname="UrinalTest" time="0.001"/>
   <testcase name="checkCountOfAvailableUrinalsTest()" classname="UrinalTest" time="0.001"/>
   <testcase name="checkFileNotFountTest()" classname="UrinalTest" time="0.003"/>
   <testcase name="checkFileFoundTest()" classname="UrinalTest" time="0.009"/>

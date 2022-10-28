@@ -65,14 +65,15 @@ public class urinals {
         String input = br.readLine();
         if (goodString(input)) {
             char[] charArray = input.toCharArray();
-            System.out.println("Number of free urinals: " + backtrack(charArray, 0, 0));
+            int answer = backtrack(charArray, 0, 0);
+            System.out.println("Number of free urinals: " + answer);
         } else {
             System.out.println("Number of free urinals: " + -1);
         }
         return input;
     }
 
-    public static void fileInput(String s) throws IllegalArgumentException, FileNotFoundException {
+    public static void fileInput(String s) throws IllegalArgumentException, IOException {
 
 
             File file = new File(s);
@@ -80,19 +81,24 @@ public class urinals {
                 throw new FileNotFoundException();
             }
             Scanner sc = new Scanner(file);
+            List<Integer> answers = new ArrayList<>();
             while (sc.hasNextLine()) {
                 String input = sc.nextLine();
                 if (goodString(input)) {
                     char[] charArray = input.toCharArray();
                     System.out.println(input);
-                    System.out.println("Number of free urinals: " + backtrack(charArray, 0, 0));
+                    int answer = backtrack(charArray, 0, 0);
+                    answers.add(answer);
+                    System.out.println("Number of free urinals: " + answer);
                 } else {
                     System.out.println(input);
                     System.out.println("Number of free urinals: " + -1);
+                    answers.add(-1);
                 }
 
                 if(input.equals("EOF"))break;
             }
+            writeToFile(answers);
             sc.close();
     }
 
@@ -122,6 +128,14 @@ public class urinals {
         return value;
     }
 
+    public static void writeToFile(List<Integer> answers) throws IOException {
+        FileWriter fileWriter = new FileWriter("src/resources/rule.txt");
+        for (int answer: answers) {
+            fileWriter.write(answer + "\n");
+        }
+        fileWriter.close();
+    }
+
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -130,7 +144,7 @@ public class urinals {
 
         if (str.equals("1")) {
             String input = keyboardInput();
-        } else if (str.equals("1")) {
+        } else if (str.equals("2")) {
             String address = "src/resources/urinal.dat";
             fileInput(address);
         }
