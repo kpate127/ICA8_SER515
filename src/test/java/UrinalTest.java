@@ -58,10 +58,21 @@ public class UrinalTest {
     }
 
     @Test
-    public void checkIsFileEmpty() throws IOException {
-        String address = "src/resources/urinal.dat";
-        assertEquals(false, urinals.emptyFile());
+    public void checkFileEmptyTest() throws IOException {
+        assertEquals(0, urinals.emptyFile());
         System.out.println("====== KUNAL JITENDRA PATEL == TEST SIX EXECUTED =======");
+    }
+    @Test
+    public void checkFileNotEmptyTest() throws IOException {
+        assertEquals(1, urinals.notEmptyFile());
+        System.out.println("====== KUNAL JITENDRA PATEL == TEST SEVEN EXECUTED =======");
+    }
+
+    @Test
+    public void checkNewFileCreatedTest() throws IOException {
+        urinals U = new urinals();
+        assertEquals(true, U.createNewFile());
+        System.out.println("====== KUNAL JITENDRA PATEL == TEST EIGHT EXECUTED =======");
     }
 
 }

@@ -63,12 +63,12 @@ public class urinals {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter the string: ");
         String input = br.readLine();
-//        if (goodString(input)) {
-//            char[] charArray = input.toCharArray();
-//            System.out.println("Number of free urinals: " + backtrack(charArray, 0, 0));
-//        } else {
-//            System.out.println("Number of free urinals: " + -1);
-//        }
+        if (goodString(input)) {
+            char[] charArray = input.toCharArray();
+            System.out.println("Number of free urinals: " + backtrack(charArray, 0, 0));
+        } else {
+            System.out.println("Number of free urinals: " + -1);
+        }
         return input;
     }
 
@@ -82,27 +82,44 @@ public class urinals {
             Scanner sc = new Scanner(file);
             while (sc.hasNextLine()) {
                 String input = sc.nextLine();
-//                if (goodString(input)) {
-//                    char[] charArray = input.toCharArray();
-//                    System.out.println(input);
-//                    System.out.println("Number of free urinals: " + backtrack(charArray, 0, 0));
-//                } else {
-//                    System.out.println(input);
-//                    System.out.println("Number of free urinals: " + -1);
-//                }
+                if (goodString(input)) {
+                    char[] charArray = input.toCharArray();
+                    System.out.println(input);
+                    System.out.println("Number of free urinals: " + backtrack(charArray, 0, 0));
+                } else {
+                    System.out.println(input);
+                    System.out.println("Number of free urinals: " + -1);
+                }
 
                 if(input.equals("EOF"))break;
             }
             sc.close();
     }
 
-    public static boolean emptyFile() throws IOException {
+    public static int emptyFile() throws IOException {
         BufferedReader br = new BufferedReader(new FileReader("src/resources/urinal.dat"));
         if(br.readLine() == null) {
-            return true;
+            return 1;
         }
+        else {
+            return 0;
+        }
+    }
 
-        return false;
+    public static int notEmptyFile() throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader("src/resources/urinal.dat"));
+        if(br.readLine() != null) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
+
+    public boolean createNewFile() throws IOException {
+        File f1 = new File("src/resources/rule.txt");
+        boolean value = f1.createNewFile();
+        return value;
     }
 
     public static void main(String[] args) throws IOException {
