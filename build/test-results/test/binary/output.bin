@@ -4,5 +4,16 @@
 :====== KUNAL JITENDRA PATEL == TEST ONE EXECUTED =======
 <====== KUNAL JITENDRA PATEL == TEST THREE EXECUTED =======
 ;====== KUNAL JITENDRA PATEL == TEST FOUR EXECUTED =======
+10001
+Number of free urinals: 1
+00000
+Number of free urinals: 3
+
+10000001
+Number of free urinals: 2
+00100
+Number of free urinals: 2
+011
+Number of free urinals: -1
 ;====== KUNAL JITENDRA PATEL == TEST FIVE EXECUTED =======
 	:====== KUNAL JITENDRA PATEL == TEST TWO EXECUTED =======

@@ -3,6 +3,7 @@
 * Asurite ID : kpate127
 * ASU ID : 1225326674
  */
+import java.nio.file.Paths;
 import java.util.*;
 import java.io.*;
 public class urinals {
@@ -84,6 +85,9 @@ public class urinals {
             List<Integer> answers = new ArrayList<>();
             while (sc.hasNextLine()) {
                 String input = sc.nextLine();
+                if(input.equals("EOF")){
+                    break;
+                }
                 if (goodString(input)) {
                     char[] charArray = input.toCharArray();
                     System.out.println(input);
@@ -129,7 +133,8 @@ public class urinals {
     }
 
     public static void writeToFile(List<Integer> answers) throws IOException {
-        FileWriter fileWriter = new FileWriter("src/resources/rule.txt");
+        int newFileIndex = new File("src/resources/rule").listFiles().length + 1;
+        FileWriter fileWriter = new FileWriter("src/resources/rule/rule"+ newFileIndex + ".txt");
         for (int answer: answers) {
             fileWriter.write(answer + "\n");
         }
@@ -150,32 +155,5 @@ public class urinals {
         }
     }
 }
-//            System.out.println("Enter the string: ");
-//            String input = br.readLine();
-//            if(goodString(input)) {
-//                char[] charArray = input.toCharArray();
-//                System.out.println("Number of free urinals: " + backtrack(charArray, 0, 0));
-//            } else{
-//                System.out.println("Number of free urinals: " + -1);
-//            }
-//        else if(str.equals("2")) {
-//            try {
-//                File file = new File("src/resources/urinal.dat");
-//                Scanner sc = new Scanner(file);
-//                while (sc.hasNextLine()) {
-//                    String input = sc.nextLine();
-//                    if(goodString(input)) {
-//                        char[] charArray = input.toCharArray();
-//                        System.out.println(input);
-//                        System.out.println("Number of free urinals: " + backtrack(charArray, 0, 0));
-//                    } else{
-//                        System.out.println(input);
-//                        System.out.println("Number of free urinals: " + -1);
-//                    }
-//                }
-//                sc.close();
-//            } catch (FileNotFoundException e) {
-//                System.out.println("An error occurred.");
-//                e.printStackTrace();
-//            }
+
 
