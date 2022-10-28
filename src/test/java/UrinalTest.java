@@ -38,6 +38,19 @@ public class UrinalTest {
         System.out.println("====== KUNAL JITENDRA PATEL == TEST THREE EXECUTED =======");
     }
 
+    @Test
+    public void checkFileNotFountTest(){
+        String address = "src/urinal.dat";
+        urinals U = new urinals();
+        assertThrows(FileNotFoundException.class, () -> {
+            U.fileInput(address);
+        });
+        System.out.println("====== KUNAL JITENDRA PATEL == TEST FOUR EXECUTED =======");
+    }
 
+    @Test
+    public void checkFileFountTest(){
+
+    }
 
 }
