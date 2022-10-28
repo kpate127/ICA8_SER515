@@ -55,7 +55,13 @@ public class UrinalTest {
             urinals.fileInput(address);
         });
         System.out.println("====== KUNAL JITENDRA PATEL == TEST FIVE EXECUTED =======");
+    }
 
+    @Test
+    public void checkIsFileEmpty() throws IOException {
+        String address = "src/resources/urinal.dat";
+        assertEquals(false, urinals.emptyFile());
+        System.out.println("====== KUNAL JITENDRA PATEL == TEST SIX EXECUTED =======");
     }
 
 }

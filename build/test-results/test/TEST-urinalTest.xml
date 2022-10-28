@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="UrinalTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-10-28T04:41:58" hostname="KUNAL" time="0.057">
+<testsuite name="UrinalTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-28T04:57:07" hostname="KUNAL" time="0.032">
   <properties/>
-  <testcase name="checkGoodStringTest()" classname="UrinalTest" time="0.031"/>
-  <testcase name="checkCountOfAvailableUrinalsTest()" classname="UrinalTest" time="0.003"/>
-  <testcase name="checkFileNotFountTest()" classname="UrinalTest" time="0.004"/>
-  <testcase name="checkFileFoundTest()" classname="UrinalTest" time="0.01"/>
-  <testcase name="checkIsEmpty()" classname="UrinalTest" time="0.002"/>
-  <system-out><![CDATA[====== KUNAL JITENDRA PATEL == TEST ONE EXECUTED =======
-====== KUNAL JITENDRA PATEL == TEST THREE EXECUTED =======
-====== KUNAL JITENDRA PATEL == TEST FOUR EXECUTED =======
-====== KUNAL JITENDRA PATEL == TEST FIVE EXECUTED =======
-====== KUNAL JITENDRA PATEL == TEST TWO EXECUTED =======
+  <testcase name="checkIsFileEmpty()" classname="UrinalTest" time="0.032"/>
+  <system-out><![CDATA[====== KUNAL JITENDRA PATEL == TEST SIX EXECUTED =======
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

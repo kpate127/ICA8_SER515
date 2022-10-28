@@ -96,6 +96,15 @@ public class urinals {
             sc.close();
     }
 
+    public static boolean emptyFile() throws IOException {
+        BufferedReader br = new BufferedReader(new FileReader("src/resources/urinal.dat"));
+        if(br.readLine() == null) {
+            return true;
+        }
+
+        return false;
+    }
+
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
