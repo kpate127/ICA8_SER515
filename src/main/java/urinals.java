@@ -8,6 +8,7 @@ import java.io.*;
 public class urinals {
 
     public static boolean countAvailableUrinals(char[] input) {
+        int res = 0;
         for (int i = 0; i < input.length; i++) {
             if (input[i] == '1') {
                 if (((i >= 1) && (input[i - 1] == '1')) || ((i < input.length - 1) && (input[i + 1] == '1')))
@@ -22,6 +23,9 @@ public class urinals {
         if (idx == input.length)
             return 0;
         else {
+//            if(!goodString(input.toString())){
+//                return -1;
+//            }
             for (int i = idx; i < input.length; i++) {
                 if (input[i] == '0') {
                     input[i] = '1';
@@ -29,6 +33,7 @@ public class urinals {
                         return backtrack(input, idx + 1, ans + 1);
                     input[i] = '0';
                 }
+                else if(i < input.length-1 && input[i+1] == '1') return -1;
             }
         }
 

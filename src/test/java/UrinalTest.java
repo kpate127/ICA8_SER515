@@ -14,9 +14,9 @@ public class UrinalTest {
     }
     @Test
     public void checkIsEmpty(){
-        String str2 = "101010";
+        String input = "101010";
         urinals U = new urinals();
-        assertEquals(false, U.emptyString(str2));
+        assertEquals(false, U.emptyString(input));
         System.out.println("====== KUNAL JITENDRA PATEL == TEST TWO EXECUTED =======");
     }
 
@@ -28,28 +28,33 @@ public class UrinalTest {
         String str4 = "0000";
         String str5 = "01000";
         String str6 = "011";
-        urinals U = new urinals();
-        assertEquals(1, U.countAvailableUrinals(str1.toCharArray()));
-        assertEquals(0, U.countAvailableUrinals(str2.toCharArray()));
-        assertEquals(3, U.countAvailableUrinals(str3.toCharArray()));
-        assertEquals(2, U.countAvailableUrinals(str4.toCharArray()));
-        assertEquals(1, U.countAvailableUrinals(str5.toCharArray()));
-        assertEquals(-1, U.countAvailableUrinals(str6.toCharArray()));
+        //urinals U = new urinals();
+        assertEquals(1, urinals.backtrack(str1.toCharArray(),0,0));
+        assertEquals(0, urinals.backtrack(str2.toCharArray(),0,0));
+        assertEquals(3, urinals.backtrack(str3.toCharArray(),0,0));
+        assertEquals(2, urinals.backtrack(str4.toCharArray(),0,0));
+        assertEquals(1, urinals.backtrack(str5.toCharArray(),0,0));
+        assertEquals(-1, urinals.backtrack(str6.toCharArray(),0,0));
         System.out.println("====== KUNAL JITENDRA PATEL == TEST THREE EXECUTED =======");
     }
 
     @Test
     public void checkFileNotFountTest(){
-        String address = "src/urinal.dat";
-        urinals U = new urinals();
+        String address = "src/resources/urinal.dat1";
         assertThrows(FileNotFoundException.class, () -> {
-            U.fileInput(address);
+            urinals.fileInput(address);
         });
         System.out.println("====== KUNAL JITENDRA PATEL == TEST FOUR EXECUTED =======");
     }
 
     @Test
-    public void checkFileFountTest(){
+    public void checkFileFoundTest(){
+        String address = "src/resources/urinal.dat";
+
+        assertDoesNotThrow( () -> {
+            urinals.fileInput(address);
+        });
+        System.out.println("====== KUNAL JITENDRA PATEL == TEST FIVE EXECUTED =======");
 
     }
 
